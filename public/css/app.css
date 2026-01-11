@@ -1,0 +1,189 @@
+
+
+body {
+    margin: 0;
+}
+
+
+.page_one {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    overflow: hidden;
+    height: 100vh;
+    padding: 0 4vw;
+    /* background: radial-gradient(
+    circle at center,
+    #395c86 0%,
+    #1e4677ca 70%,
+    #093870 100%
+    
+); */
+background-color: #d8d8d8;
+    
+}
+
+
+.page_one::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(10px);
+    z-index: 1;
+}
+
+
+.page_one > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+.img_signUP {
+    background-color: #d8d8d8;
+    /* border-radius: 25px; */
+    animation: jump 1.2s ease-out forwards;
+    }
+
+
+
+.img_signUP img:last-child {
+    width: 60vw;
+    border-radius: 20px;
+    display: block;
+}
+
+
+.img_signUP img:first-child {
+    position: absolute;
+    width: 80%;
+    top: 55%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    z-index: 2; 
+    transition: transform 0.2s ease, z-index 0s;
+}
+
+
+.img_signUP img:first-child:hover{
+    transform: scale(1.5) translate(-35%, -40%); 
+    z-index: 999;
+    width: 60%;
+}
+
+.singUP{
+    border-radius: 25px;
+    height: 50vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+    position: relative; 
+    z-index: 1;
+}
+
+
+.div_input{
+    background-color: #0359b4a8;
+    padding: 3vw;
+    border-radius: 25px;
+    box-shadow:
+    0 8px 15px rgba(72, 71, 71, 0.25),
+    0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    padding-bottom: 4vh;
+}
+.singUP h1{
+    color: white;
+    font-family: Marker Felt, fantasy;
+    letter-spacing: 2px;
+    font-weight: 400;
+    text-shadow:
+    1px 1px 0 #fff,
+    2px 2px 0 #cbcaca,
+    3px 3px 0 #b8b8b8;
+    font-size: 3vw;
+    margin: 0;
+}
+.input div{
+    display: flex;
+    gap: 5%;
+}
+
+.input input{
+    border: none;
+    border-bottom: rgba(255, 255, 255, 0.586) solid 1px;
+    background-color: transparent;
+    width: 100%;
+}
+
+.singUP button{
+    border: none;
+    border-radius: 25px;
+    background-color: #dd9828c0;
+    padding: 3% 2vw;
+    color: rgba(255, 255, 255, 0.778);
+    font-family: Marker Felt, fantasy;
+    box-shadow:
+    0 8px 15px rgba(72, 71, 71, 0.25),
+    0 20px 40px rgba(91, 91, 91, 0.15);
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+.singUP button:hover{
+    background-color: #dd9828ec;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.input div svg{
+transition: transform 0.3s ease;
+}
+
+.input div svg:hover{
+    cursor: pointer;
+    transform: scale(1.5);
+}
+
+
+
+
+
+
+
+@keyframes jump {
+    0% {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+
+    25% {
+        transform: translateY(-60px);
+        opacity: 1;
+    }
+
+    45% {
+        transform: translateY(30px);
+    }
+
+    65% {
+        transform: translateY(-30px);
+    }
+
+    85% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
