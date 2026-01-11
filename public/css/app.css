@@ -1,6 +1,10 @@
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
+    font-size: 3vw;
+    color: #ffb6c1;
+    font-family: Marker Felt, fantasy;
+    letter-spacing: 2px;
+    font-weight: 300;
     background-color: #ffe6f0; 
     display: flex;
     justify-content: center;
@@ -9,12 +13,6 @@ body {
     flex-direction: column;
 }
 
-h1 {
-    color: rgb(221, 175, 175);
-    font-family: Marker Felt, fantasy;
-    font-weight: 400;
-    font-size:5vw;
-}
 
 .button-container {
     display: flex;
@@ -24,35 +22,32 @@ h1 {
     align-items: center;
 }
 
-
 .btn {
     background-color: #ffb6c1; 
     color: white;
     font-size: 22px;
     font-weight: bold;
     padding: 20px 50px; 
-    border: 3px solid  rgb(221, 175, 175);; 
+    border: 3px solid #ff99c8; 
     border-radius: 25px; 
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 3px 6px 15px rgba(255,182,193,0.6);
 }
 
-
 .btn:hover {
     transform: translateY(-5px) scale(1.05);
-    background-color: #ff8cc2; 
-    border-color: #a3647d; 
+    background-color: #ff99c8; 
+    border-color: #ff4d94; 
     box-shadow: 6px 12px 25px rgba(255,105,180,0.5);
 }
-
 
 .btn:active {
     transform: translateY(0) scale(0.98);
     box-shadow: 2px 5px 12px rgba(255,182,193,0.5);
 }
 
-
+/* MODALS */
 .modal {
     display: none;
     position: fixed;
@@ -64,7 +59,6 @@ h1 {
     z-index: 1000;
 }
 
-
 .modalContent {
     padding: 25px 40px;
     border-radius: 20px;
@@ -72,7 +66,6 @@ h1 {
     box-shadow: 0 8px 20px rgba(255,182,193,0.4);
     position: relative;
 }
-
 
 .pinkStyle {
     background-color: #ffe4e1;
@@ -83,7 +76,6 @@ h1 {
     background-color: #cce7ff;
     border: 2px solid #99ccff;
 }
-
 
 .close {
     position: absolute;
@@ -98,4 +90,58 @@ h1 {
 
 .close:hover {
     color: #ff1493;
+}
+
+/*  CAROUSEL  */
+.carousel-container {
+    margin-top: 40px;
+    background: #fff0f6;
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(255, 182, 193, 0.5);
+    text-align: center;
+}
+
+.carousel {
+    width: 400px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    display: none;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.heart-btn {
+    background: #ffb6c1;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 26px;
+    color: white;
+    box-shadow: 0 6px 15px rgba(255,105,180,0.5);
+    transition: all 0.3s ease;
+}
+
+.heart-btn:hover {
+    transform: scale(1.15);
+    background: #ff69b4;
+}
+
+.heart-btn:active {
+    transform: scale(0.95);
 }
